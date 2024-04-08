@@ -69,7 +69,7 @@ python tools/test_occ.py $config $checkpoint --eval mIoU
 #### Train & Test model
 ```shell
 # multiple gpu
-./train_eval_occ.sh $config num_gpu --eval mIoU
+./train_eval_occ.sh $config num_gpu
 ```
 
 #### Visualize the predicted result.

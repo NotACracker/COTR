@@ -59,7 +59,7 @@ class CustomDistEvalHook(BaseDistEvalHook):
         # different ranks, so we broadcast BatchNorm's buffers
         # of rank 0 to other ranks to avoid this.
         if self.broadcast_bn_buffer:
-            model = runner.ema_model
+            model = runner.model
             for name, module in model.named_modules():
                 if isinstance(module,
                               _BatchNorm) and module.track_running_stats:
